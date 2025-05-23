@@ -1,0 +1,75 @@
+/* Breadcrumb Section */
+.breadcrumb-section {
+    background-image: url('../../assets/images/bread-crumb-bg.jpeg');
+    background-size: cover;
+    background-position: center;
+    padding: 120px 0;
+    color: white;
+    position: relative;
+}
+
+.breadcrumb-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.breadcrumb-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.breadcrumb-text h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.breadcrumb-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.breadcrumb-links a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb-links .active {
+    color: #ccc;
+}
+
+/* About Content */
+.about-content {
+    padding: 50px 0;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Navbar */
+.navbar {
+    padding: 20px;
+    background: #333;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+.navbar a.active {
+    color: #4CAF50;
+}

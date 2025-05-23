@@ -1,0 +1,111 @@
+    /* Reset default browser styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0 !important;
+    }
+
+    /* Define CSS variables */
+    :root {
+      --black: #000;
+      --white: #fff;
+      --space-sm: 10px;
+      --space-md: 20px;
+      --space-lg: 30px;
+      --space-xl: 50px; /* Define --space-xl */
+    }
+
+    /* Main Header */
+    .main-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: var(--black);
+      padding: var(--space-sm) 0; /* Adjust padding as needed */
+      z-index: 1000;
+      box-shadow: none; /* Remove box shadow */
+    }
+
+    .nav-container {
+      width: 100%;
+      max-width: 1400px; /* Slightly increase max-width for a longer navbar */
+      margin: 0 auto;
+      padding: 0 var(--space-xl); /* Increase padding significantly for a longer navbar */
+      display: flex;
+      justify-content: space-between; /* Aligns logo to the left and header-right to the right */
+      align-items: center;
+    }
+
+    /* Logo Styling */
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-img {
+      height: 30px; /* Reduced logo size */
+      width: auto; /* Maintain aspect ratio */
+    }
+
+    /* Header Right Section */
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: var(--space-md); /* Space between buttons */
+    }
+
+    /* Menu Button */
+    .menu-toggle {
+      background: transparent;
+      border: none;
+      color: var(--white);
+      font-size: 1rem; /* Icon size */
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+    }
+
+    .menu-text {
+      font-size: 0.8rem; /* Smaller font size for "Menu" text */
+      text-transform: uppercase;
+    }
+
+    .menu-icon {
+      font-size: 1.2rem; /* Icon size */
+    }
+
+    /* Cart Button */
+    .cart-btn {
+      background: transparent;
+      border: none;
+      color: var(--white);
+      font-size: 1.2rem; /* Icon size */
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .nav-container {
+        padding: 0 var(--space-sm); /* Reduce padding on smaller screens */
+      }
+
+      .logo-img {
+        height: 25px; /* Even smaller logo for mobile */
+      }
+
+      .header-right {
+        gap: var(--space-sm); /* Reduce spacing between buttons */
+      }
+
+      .menu-text {
+        display: none; /* Hide "Menu" text on smaller screens */
+      }
+    }

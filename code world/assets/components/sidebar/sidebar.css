@@ -1,0 +1,88 @@
+/* ===== SIDEBAR STYLES ===== */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100vh;
+  background-color: var(--white); /* Changed to white */
+  transition: right 0.3s ease;
+  z-index: 999;
+  padding-top: 70px;
+}
+
+.sidebar.active {
+  right: 0;
+}
+
+.sidebar-nav {
+  list-style: none;
+}
+
+.sidebar-nav li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-nav a {
+  display: block;
+  padding: var(--space-md) var(--space-lg);
+  color: var(--text-dark); /* Adjusted for better visibility */
+  text-decoration: none;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: all 0.3s ease;
+}
+
+.sidebar-nav a:hover {
+  background-color: var(--dark-gray);
+  padding-left: var(--space-xl);
+  color: var(--white); /* Ensure hover text is readable */
+}
+
+/* ===== CONTENT WRAPPER ===== */
+.content-wrapper {
+  margin-top: 70px;
+  transition: margin-right 0.3s ease;
+}
+
+.content-wrapper.shifted {
+  margin-right: 300px;
+}
+.sidebar-nav li {
+  position: relative;
+  border-bottom: none; /* Remove old border */
+}
+
+.tick {
+  position: absolute;
+  left: 20px;
+  color: #0d6efd; /* Blue tick color */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.sidebar-nav a {
+  display: block;
+  padding: 15px 20px 15px 40px; /* Space for tick */
+  color: #333;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.sidebar-nav a:hover {
+  background-color: #e7f1ff; /* Light blue hover */
+  color: #0d6efd; /* Blue text on hover */
+  padding-left: 50px; /* Animate padding */
+}
+
+.sidebar-nav a:hover + .tick {
+  opacity: 1; /* Show tick on hover */
+}
+
+.separator {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #ddd, transparent);
+  margin: 0 20px;
+}
